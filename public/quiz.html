@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.E.P.L.E.R Treasure Hunt - Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container quiz-container">
+        <div class="quiz-header">
+            <h1>K.E.P.L.E.R Physics Treasure Hunt</h1>
+            <div class="quiz-info">
+                <div id="username-display" class="username"></div>
+                <div id="timer" class="timer">60:00</div>
+            </div>
+        </div>
+
+        <div id="questions-container" class="questions-wrapper">
+            <!-- Questions will be dynamically loaded here -->
+        </div>
+
+        <button id="submit-btn" class="btn" disabled>Submit Answers</button>
+
+        <!-- Result Modal -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
+                <h2 id="result-title"></h2>
+                <p id="result-message"></p>
+                <button id="retry-btn" class="btn" style="display: none;">Try Again</button>
+            </div>
+        </div>
+
+        <!-- Warning Modal -->
+        <div id="warning-modal" class="modal">
+            <div class="modal-content warning">
+                <h2>⚠️ Warning!</h2>
+                <p id="warning-message"></p>
+                <button id="warning-ok-btn" class="btn">I Understand</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="anti-cheat.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
