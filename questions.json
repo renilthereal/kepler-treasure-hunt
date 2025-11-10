@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "Two-point charges Q and 3Q are placed in the xy-plane at the origin (0, 0) and a point (2, 0), respectively. This results in an equipotential circle of radius R and potential V ≠ 0 in the xy-plane with its centre at (b, 0). All lengths are measured in meters. The value of R is ____ meter.",
+    "latex": "Q_1 = Q \\text{ at } (0,0), \\quad Q_2 = 3Q \\text{ at } (2,0)",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "1.73"
+  },
+  {
+    "id": 2,
+    "question": "The specific heat capacity of a substance is temperature dependent and is given by the formula c(T) = kT, where k is a constant of suitable dimensions in SI units, and T is the absolute temperature. If the heat required to raise the temperature of 1 kg of the substance from 73 K to 27 K is 10 kJ, the value of k is ____.",
+    "latex": "c(T) = kT, \\quad Q = \\int_{73}^{27} mc(T)dT = 10 \\text{ kJ}",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "25000"
+  },
+  {
+    "id": 3,
+    "question": "A point source S emits unpolarized light uniformly in all directions. At two points A and B, the ratio of the intensities of light is 2. If a set of two polaroids having 45° angle between their pass-axes is placed just before point B, then the new value of the intensity ratio (I_A/I_B) will be ____.",
+    "latex": "\\frac{I_A}{I_B} = 2 \\text{ initially, with polaroids: } I'_B = I_B \\times \\frac{1}{2} \\times \\cos^2(45°)",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "8"
+  },
+  {
+    "id": 4,
+    "question": "A liquid at 30°C is poured very slowly into a Calorimeter that is at temperature of 110°C. The boiling temperature of the liquid is 80°C. It is found that the first 5 gm of the liquid completely evaporates. After pouring another 80 gm of the liquid the equilibrium temperature is found to be 50°C. The ratio of the Latent heat of the liquid to its specific heat will be ____ °C.",
+    "latex": "T_{liquid} = 30°C, T_{cal} = 110°C, T_{boil} = 80°C, T_{eq} = 50°C",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "270"
+  },
+  {
+    "id": 5,
+    "question": "A parallel plate capacitor of capacitance C₀ has spacing d between two plates having area A. The region between the plates is filled with N dielectric layers, parallel to its plates, each with thickness d/N. The dielectric constant of the kth layer is k(1 + k/N). For a very large N (N→10³) the capacitance C is nC₀. The value of n will be ____.",
+    "latex": "C = nC_0, \\quad \\varepsilon_k = k\\left(1 + \\frac{k}{N}\\right), \\quad N \\to 10^3",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "1.00"
+  },
+  {
+    "id": 6,
+    "question": "A heavy nucleus Q of half-life 20 minutes undergoes alpha-decay with probability of 60% and beta-decay with probability of 40%. Initially, the number of Q nuclei is 1000. The number of alpha-decays of Q in the first one hour is ____.",
+    "latex": "t_{1/2} = 20 \\text{ min}, P_{\\alpha} = 0.6, P_{\\beta} = 0.4, N_0 = 1000, t = 60 \\text{ min}",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "525"
+  },
+  {
+    "id": 7,
+    "question": "In the following circuit, the resistances are: 12Ω, 4Ω and 2Ω. The charge stored in the capacitor is ____ μC.",
+    "latex": "R_1 = 12\\Omega, R_2 = 4\\Omega, R_3 = 2\\Omega",
+    "image": "circuit_q7.png",
+    "type": "numeric",
+    "correctAnswer": "8.00"
+  },
+  {
+    "id": 8,
+    "question": "An α-particle (mass 4 amu) and a singly charged sulfur ion (mass 32 amu) are initially at rest. They are accelerated through a potential V and then allowed to pass into a region of uniform magnetic field which is normal to the velocities of the particles. Within this region, the α-particle and the sulfur ion move in circular orbits of radii r_α and r_S, respectively. The ratio r_S/r_α is ____.",
+    "latex": "m_{\\alpha} = 4 \\text{ amu}, m_S = 32 \\text{ amu}, q_{\\alpha} = 2e, q_S = e, r = \\frac{mv}{qB}",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "4"
+  },
+  {
+    "id": 9,
+    "question": "A beam of wavelength 400nm and power 1.55 mW is directed at the cathode of a photoelectric cell. If only 10% of the incident photons effectively produce photoelectrons, find the current due to the electrons in μA.",
+    "latex": "\\lambda = 400 \\text{ nm}, P = 1.55 \\text{ mW}, \\eta = 0.1, I = \\frac{nqe}{t}",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "49.6"
+  },
+  {
+    "id": 10,
+    "question": "In a Davisson-Germer Experiment, a collimated beam of electrons of energy 54eV, at normal incidence on a given crystal, shows a peak at a reflection angle of 40°. If the electron beam is replaced by a neutron beam, and the peak appears at the same value of reflection angle, then the kinetic energy of the neutrons must be ____ eV (consider non-relativistic case).",
+    "latex": "E_e = 54 \\text{ eV}, \\theta = 40°, \\lambda = \\frac{h}{\\sqrt{2mE}}",
+    "image": null,
+    "type": "numeric",
+    "correctAnswer": "0.03"
+  }
+]
