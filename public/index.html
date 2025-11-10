@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.E.P.L.E.R Treasure Hunt - Login</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="header">
+                <h1>🚀 K.E.P.L.E.R</h1>
+                <h2>Online Physics Treasure Hunt</h2>
+                <p class="subtitle">World Science Day 2025</p>
+            </div>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">👤 First Name</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        placeholder="Enter your first name" 
+                        required 
+                        autocomplete="off"
+                    >
+                    <small>Enter your first name only (case-insensitive)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">🔒 Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="password" 
+                        name="password" 
+                        placeholder="Enter your 10-digit phone number" 
+                        required 
+                        pattern="[0-9]{10,15}"
+                        autocomplete="off"
+                    >
+                    <small>Enter your registered phone number</small>
+                </div>
+
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+                <button type="submit" class="btn-primary" id="loginBtn">
+                    Start Treasure Hunt ➡️
+                </button>
+            </form>
+
+            <div class="info-section">
+                <h3>📝 Instructions</h3>
+                <ul>
+                    <li>⏱️ You have <strong>60 minutes</strong> to complete the quiz</li>
+                    <li>📝 Answer all <strong>10 questions</strong> to submit</li>
+                    <li>✅ Get all answers correct to access the Google Meet</li>
+                    <li>🔁 You can retry if you don't get a perfect score</li>
+                    <li>⚠️ Tab switching and right-click are disabled</li>
+                </ul>
+            </div>
+
+            <div class="footer">
+                <p>Organized by <strong>INPS</strong></p>
+                <p class="small-text">Indian Network of Physics Students</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const loginBtn = document.getElementById('loginBtn');
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            errorMessage.style.display = 'none';
+            loginBtn.disabled = true;
+            loginBtn.textContent = 'Logging in...';
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Store start time
+                    sessionStorage.setItem('quizStartTime', data.startTime);
+                    sessionStorage.setItem('username', data.username);
+                    // Redirect to quiz page
+                    window.location.href = '/quiz.html';
+                } else {
+                    errorMessage.textContent = data.error || 'Login failed';
+                    errorMessage.style.display = 'block';
+                    loginBtn.disabled = false;
+                    loginBtn.textContent = 'Start Treasure Hunt \u27a1\ufe0f';
+                }
+            } catch (error) {
+                errorMessage.textContent = 'Network error. Please try again.';
+                errorMessage.style.display = 'block';
+                loginBtn.disabled = false;
+                loginBtn.textContent = 'Start Treasure Hunt \u27a1\ufe0f';
+            }
+        });
+
+        // Prevent right-click on login page too
+        document.addEventListener('contextmenu', e => e.preventDefault());
+    </script>
+</body>
+</html>
